@@ -38,7 +38,7 @@ jobs:
       - name: Deploy to Docker swarm
         uses: wshihadeh/docker-deployment-action@v1
         with:
-          remote_docker_host: sudo ubuntu@52.55.244.111
+          remote_docker_host: ubuntu@52.55.244.111
           ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
           ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
           deployment_mode: docker-swarm
@@ -48,7 +48,7 @@ jobs:
       - name: Deploy to Docker Host
         uses: wshihadeh/docker-deployment-action@v1
         with:
-          remote_docker_host: sudo ubuntu@52.55.244.111
+          remote_docker_host: ubuntu@52.55.244.111
           ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
           ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
           deployment_mode: docker-compose
