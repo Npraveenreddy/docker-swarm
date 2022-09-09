@@ -40,7 +40,5 @@ jobs:
           remote_host: ssh://ubuntu@54.152.151.31
           ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
           ssh_public_key: ${{ secrets.DOCKER_SSH_KNOWN_HOSTS }}
-          deployment_mode: docker-swarm
-          deploy_path: /root/
           stack_file_name: compose.yaml
           args: my_applicaion
