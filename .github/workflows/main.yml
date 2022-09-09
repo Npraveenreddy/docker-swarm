@@ -29,7 +29,7 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file backend/pom.xml
     - name: Deploy to swarm
       uses: sagebind/docker-swarm-deploy-action@v2
       with:
