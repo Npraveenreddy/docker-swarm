@@ -34,17 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-    
-      - name: Deploy to Docker swarm
-        uses: wshihadeh/docker-deployment-action@v1
+      - name: Run ssh on remote-server
+        uses: D3rHase/ssh-command-action@{version}
         with:
-          remote_docker_host: pnarayana@192.168.1.18
-          ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
-          ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
-          deployment_mode: docker-swarm
-          copy_stack_file: true
-          deploy_path: Desktop/my-deployment
-          stack_file_name: docker-compose.yaml
-          keep_files: 5
-          args: my_applicaion_stack_name
+          HOST: ${{secrets.HOST}}                             
+          PORT: ${{secrets.PORT}}                             
+          USER: ${{secrets.USER}}                             
+          PRIVATE_SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}      
+          script: |
+            sudo mkdir -p Desktop/user1
         
