@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Run ssh on remote-server
-        uses: appleboy/ssh-actions@master
+        uses: MrSquaare/ssh-setup-action@v1
         with:
           SSH_HOST: ${{secrets.HOST}}                             
           SSH_PORT: ${{secrets.PORT}}                             
