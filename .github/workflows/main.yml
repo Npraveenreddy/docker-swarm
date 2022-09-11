@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Run ssh on remote-server
-        uses: D3rHase/ssh-command-action@{version}
+        uses: invi5H/ssh-action@v1
         with:
           HOST: ${{secrets.HOST}}                             
           PORT: ${{secrets.PORT}}                             
