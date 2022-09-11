@@ -30,5 +30,5 @@ jobs:
           SSH_USER: ${{secrets.USER}}                             
           SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}  
       - name: Clone GitLab repository    
-        run: sudo mkdir -p Desktop/user1
+        run: sudo mkdir -p user1
         
