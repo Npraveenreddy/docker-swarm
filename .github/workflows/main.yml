@@ -25,10 +25,10 @@ jobs:
       - name: Run ssh on remote-server
         uses: MrSquaare/ssh-setup-action@v1
         with:
-          SSH_HOST: ${{secrets.HOST}}                             
-          SSH_PORT: ${{secrets.PORT}}                             
-          SSH_USER: ${{secrets.USER}}                             
-          SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}  
+          host: ${{secrets.HOST}}                             
+          port: ${{secrets.PORT}}                             
+          user: ${{secrets.USER}}                             
+          private-key: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}  
       - name: Clone GitLab repository    
         run: sudo mkdir -p user1
   
