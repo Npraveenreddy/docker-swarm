@@ -29,6 +29,6 @@ jobs:
           SSH_PORT: ${{secrets.PORT}}                             
           SSH_USER: ${{secrets.USER}}                             
           SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}      
-          script: |
-            sudo mkdir -p Desktop/user1
+          SCRIPT: |
+             sudo mkdir -p Desktop/user1
         
