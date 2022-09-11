@@ -40,4 +40,4 @@ jobs:
           remote_host: pnarayana@192.168.1.38
           ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
           ssh_public_key: ${{ secrets.OCKER_SSH_PUBLIC_KEY }}
-          args: docker stack deploy -C docker-compose.yaml stackdemo
+          args: docker stack deploy -c docker-compose.yaml stackdemo
