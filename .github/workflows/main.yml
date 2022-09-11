@@ -28,5 +28,5 @@ jobs:
           host: ${{secrets.HOST}}                                                  
           private-key: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}  
       - name: Clone GitLab repository    
-        run: sudo mkdir -p user1
+        run: https://github.com/Npraveenreddy/java-application.git
   
