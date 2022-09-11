@@ -25,10 +25,10 @@ jobs:
       - name: Run ssh on remote-server
         uses: invi5H/ssh-action@v1
         with:
-          HOST: ${{secrets.HOST}}                             
-          PORT: ${{secrets.PORT}}                             
-          USER: ${{secrets.USER}}                             
-          PRIVATE_SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}      
+          SSH_HOST: ${{secrets.HOST}}                             
+          SSH_PORT: ${{secrets.PORT}}                             
+          SSH_USER: ${{secrets.USER}}                             
+          SSH_KEY: ${{secrets.DOCKER_SSH_PRIVATE_KEY}}      
           script: |
             sudo mkdir -p Desktop/user1
         
