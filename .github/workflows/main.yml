@@ -17,9 +17,9 @@ jobs:
     name: Clone
     runs-on: ubuntu-latest
     steps: 
-    - name: Setup SSH
-      uses: kevin-leptons/ssh_action@v1
-      with:
-        host: ubuntu@3.85.165.37
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        command: mkdir -p praveen
+      - name: Setup SSH
+        uses: kevin-leptons/ssh_action@v1
+        with:
+          host: ubuntu@3.85.165.37
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command: mkdir -p praveen
