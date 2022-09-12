@@ -16,7 +16,7 @@ jobs:
   clone: 
     name: Clone
     runs-on: ubuntu-latest
-    steps:
+    steps: 
     - name: Setup SSH
       uses: kevin-leptons/ssh_action@v1
       with:
